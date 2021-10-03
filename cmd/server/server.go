@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+
+	myapi "github.com/alexeyzaitcev/SimpleApiServer/tree/master/internal/api/internal/api"
 )
 
 func apiHandler(w http.ResponseWriter, r *http.Request) {
@@ -20,6 +22,8 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	fmt.Println("Simple web server")
+
+	fmt.Println(myapi.Version())
 
 	// static content
 	http.Handle("/", http.FileServer(http.Dir("./web/static")))

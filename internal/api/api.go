@@ -1,5 +1,5 @@
 package api
 
-func version() string {
+func Version() string {
 	return "module: api v.0"
 }
